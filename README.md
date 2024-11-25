@@ -3,7 +3,9 @@ code for paper: [UniTabE: A Universal Pretraining Protocol for Tabular Foundatio
 
 ## Environment 
 ```bash
-conda env create -f experiment-envs/a100_env.txt -n YOUR-ENV-NAME
+conda create -y -n envtab python=3.7 pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
+conda install -y -n envtab loguru numpy setuptools transformers pandas openml
+pip install -y scikit_learn streamtologger tensorboard
 ```
 
 ## Training
